@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Netflix V2 Strategy Microsite</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; background:#111; color:#fff;}
+  header {background:#e50914; padding:30px; text-align:center;}
+  section {padding:40px; max-width:1000px; margin:auto;}
+  h1,h2 {color:#e50914;}
+  .card {background:#1c1c1c; padding:20px; margin:20px 0; border-radius:10px;}
+  .grid {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .btn {background:#e50914; padding:10px 20px; border:none; color:#fff; cursor:pointer; border-radius:5px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Netflix V2 Strategy Microsite</h1>
+  <p>Capstone Business Pivot | Strategy, Financials & AI Integration</p>
+</header>
+
+<section>
+  <h2>Strategic Intent</h2>
+  <div class="card">
+    <p>Optimize Netflix for retention, profitability, and capital efficiency by reducing churn, improving perceived value, and diversifying revenue through ad-supported tiers.</p>
+  </div>
+
+  <h2>V1 vs V2 Comparison</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>V1 Weaknesses</h3>
+      <ul>
+        <li>High content spend with low ROI</li>
+        <li>Subscriber churn</li>
+        <li>Price sensitivity</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>V2 Improvements</h3>
+      <ul>
+        <li>Focused content investment</li>
+        <li>Ad-supported pricing tier</li>
+        <li>Improved retention strategy</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Ideal Customer Profile (ICP)</h2>
+  <div class="card">
+    <p><strong>V2 ICP:</strong> Value-conscious global users who prioritize flexibility, affordability, and high-quality recognizable content.</p>
+    <p><strong>Difference from V1:</strong> Shift from mass acquisition to segmented, retention-focused users.</p>
+  </div>
+
+  <h2>Financial Model (3-Year Projection)</h2>
+  <div class="card">
+    <canvas id="financeChart"></canvas>
+  </div>
+
+  <h2>AI & Technology Integration</h2>
+  <div class="card">
+    <ul>
+      <li>AI-powered recommendation engine</li>
+      <li>Content ROI prediction models</li>
+      <li>Churn prediction analytics</li>
+    </ul>
+  </div>
+
+  <h2>Interactive Toggle</h2>
+  <div class="card">
+    <p id="toggleText">Click below to view downside scenario.</p>
+    <button class="btn" onclick="toggleScenario()">Toggle Scenario</button>
+  </div>
+
+  <h2>Conclusion</h2>
+  <div class="card">
+    <p>Netflix V2 ensures sustainable growth through disciplined strategy, improved unit economics, and AI-driven efficiency.</p>
+  </div>
+</section>
+
+<script>
+  const ctx = document.getElementById('financeChart');
+  const financeChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Year 1','Year 2','Year 3'],
+      datasets: [{
+        label: 'Revenue Growth (%)',
+        data: [5,10,18],
+        borderColor: '#e50914'
+      },{
+        label: 'Cost Reduction (%)',
+        data: [2,5,8],
+        borderColor: '#00ffcc'
+      }]
+    }
+  });
+
+  let toggle = false;
+  function toggleScenario() {
+    toggle = !toggle;
+    document.getElementById('toggleText').innerText = toggle
+      ? 'Downside Scenario: Slower growth due to competition'
+      : 'Click below to view downside scenario.';
+  }
+</script>
+
+</body>
+</html>
