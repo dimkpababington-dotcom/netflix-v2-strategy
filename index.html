@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Netflix V2 Microsite</title>
+<title>Netflix V2 Strategic Microsite</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <style>
 body {font-family: Arial; margin:0; background:#111; color:#fff;}
 nav {background:#000; padding:15px; text-align:center;}
 nav a {color:#fff; margin:0 15px; text-decoration:none;}
+
 section {padding:50px; max-width:1000px; margin:auto;}
 h1,h2 {color:#e50914;}
+
 .card {background:#1c1c1c; padding:20px; margin:20px 0; border-radius:10px;}
-.btn {background:#e50914; padding:12px 20px; display:inline-block; margin-top:10px;}
+.grid {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.btn {background:#e50914; padding:10px 20px; display:inline-block; margin-top:10px;}
+
+.toggle {background:#333; padding:10px; cursor:pointer; margin-top:10px;}
 </style>
 </head>
 
@@ -17,108 +24,182 @@ h1,h2 {color:#e50914;}
 
 <nav>
 <a href="#home">Home</a>
-<a href="#details">Offering</a>
+<a href="#offering">Offering</a>
 <a href="#pricing">Pricing</a>
 <a href="#trust">Results</a>
 </nav>
 
 <!-- HOMEPAGE -->
 <section id="home">
-<h1>Netflix V2: Smarter Streaming for Value-Conscious Users</h1>
+<h1>Netflix V2: Flexible Streaming for Value-Conscious Users</h1>
 
 <div class="card">
-<p><strong>Who it's for:</strong> Price-sensitive global users seeking flexibility</p>
-<p><strong>What it delivers:</strong> Affordable, high-quality content with flexible access</p>
+<p>
+Designed for price-sensitive users frustrated with rigid subscriptions, Netflix V2 delivers a flexible, AI-powered streaming experience that reduces churn and increases value.
+</p>
 </div>
 
+<!-- ICP PERSONA -->
 <div class="card">
-<h2>Solution</h2>
-<p>Netflix V2 introduces an ad-supported tier and AI-driven personalization to reduce churn and improve retention.</p>
-</div>
+<h2>Ideal Customer Profile (ICP)</h2>
 
-<div class="card">
-<h2>Key Outcomes</h2>
-<ul>
-<li>Reduce churn by 30%</li>
-<li>Improve content ROI by 15%</li>
-<li>Expand access through lower pricing tiers</li>
-</ul>
+<p><strong>Name:</strong> Daniel, 28</p>
+<p><strong>Behavior:</strong> Subscribes occasionally, cancels frequently due to cost</p>
+<p><strong>Pain Point:</strong> Feels locked into paying for content he doesn’t always use</p>
+<p><strong>Goal:</strong> Affordable, flexible streaming without commitment pressure</p>
 </div>
 
 <a href="#pricing" class="btn">View Pricing</a>
 </section>
 
-<!-- OFFERING PAGE -->
-<section id="details">
-<h2>What You Get</h2>
+<!-- OFFERING -->
+<section id="offering">
+<h2>Netflix V2 Offering</h2>
 
 <div class="card">
+<p>
+Netflix V2 transforms streaming into a flexible, value-driven model through pricing tiers and AI-driven personalization.
+</p>
+</div>
+
+<!-- V1 vs V2 -->
+<div class="grid">
+
+<div class="card">
+<h3>V1 Problems</h3>
 <ul>
-<li><strong>Format:</strong> Subscription + Ad-supported model</li>
-<li><strong>Access:</strong> On-demand streaming globally</li>
-<li><strong>Core Features:</strong> AI recommendations, flexible pricing</li>
-<li><strong>Support:</strong> Multi-device, 24/7 platform</li>
-<li><strong>Deliverables:</strong> Personalized content experience</li>
-<li><strong>Outcome:</strong> Higher value per dollar spent</li>
+<li>High churn (4%)</li>
+<li>Rigid subscription model</li>
+<li>Low pricing flexibility</li>
+<li>Inefficient content spend</li>
 </ul>
 </div>
 
-<a href="#pricing" class="btn">See Pricing Options</a>
+<div class="card">
+<h3>V2 Improvements</h3>
+<ul>
+<li>Reduced churn (2.5%)</li>
+<li>Flexible pricing tiers</li>
+<li>AI personalization</li>
+<li>Optimized content ROI</li>
+</ul>
+</div>
+
+</div>
 </section>
 
-<!-- PRICING PAGE -->
+<!-- PRICING -->
 <section id="pricing">
-<h2>Pricing Structure</h2>
+<h2>Pricing Plans</h2>
 
 <div class="card">
-<h3>Ad-Supported Plan</h3>
+<h3>Ad-Supported</h3>
 <p>$6/month</p>
-<p>Includes ads, full content access</p>
 </div>
 
 <div class="card">
-<h3>Standard Plan</h3>
+<h3>Standard</h3>
 <p>$10/month</p>
-<p>No ads, HD streaming</p>
 </div>
 
 <div class="card">
-<h3>Premium Plan</h3>
+<h3>Premium</h3>
 <p>$15/month</p>
-<p>4K streaming + multi-device</p>
 </div>
 
 <div class="card">
-<h3>Risk Reduction</h3>
-<ul>
-<li>Cancel anytime</li>
-<li>Flexible downgrade options</li>
-</ul>
+<p>✔ Cancel anytime | ✔ Flexible plans</p>
 </div>
-
-<a href="#trust" class="btn">See Results</a>
 </section>
 
-<!-- TRUST / RESULTS PAGE -->
+<!-- RESULTS / TRUST -->
 <section id="trust">
-<h2>Proof & Results</h2>
+<h2>Performance & Financial Model</h2>
 
 <div class="card">
-<ul>
-<li>Projected churn reduction: 30%</li>
-<li>Ad-tier adoption: 20% of users</li>
-<li>Revenue growth: 15% by Year 3</li>
-<li>Improved retention through AI personalization</li>
+<ul id="metrics">
+<li>Churn: 2.5%</li>
+<li>Revenue Growth: 15%</li>
+<li>Ad Revenue: 20%</li>
+<li>Break-even: Year 2</li>
 </ul>
 </div>
 
-<div class="card">
-<h3>Strategic Strength</h3>
-<p>Netflix V2 aligns pricing, content, and user expectations—fixing the core mismatch identified in V1.</p>
+<!-- TOGGLE -->
+<div class="toggle" onclick="toggleScenario()">
+Click to View Downside Scenario
 </div>
 
-<a href="#home" class="btn">Back to Top</a>
+<!-- CHART -->
+<div class="card">
+<canvas id="chart"></canvas>
+</div>
+
+<!-- CTA -->
+<div class="card">
+<h2>Start Your Experience</h2>
+<p>Flexible pricing. Smarter streaming. Better value.</p>
+<a class="btn">Get Started</a>
+</div>
+
 </section>
+
+<script>
+let base = true;
+
+const ctx = document.getElementById('chart');
+
+let chart = new Chart(ctx, {
+type: 'line',
+data: {
+labels: ['Year 1', 'Year 2', 'Year 3'],
+datasets: [
+{
+label: 'Revenue Growth',
+data: [5,10,15],
+borderColor:'#e50914'
+},
+{
+label: 'Cost Growth',
+data: [4,6,8],
+borderColor:'#00ffcc'
+}
+]
+}
+});
+
+function toggleScenario() {
+
+const metrics = document.getElementById("metrics");
+
+if(base){
+metrics.innerHTML = `
+<li>Churn: 3.5%</li>
+<li>Revenue Growth: 7%</li>
+<li>Ad Revenue: 15%</li>
+<li>Break-even: Year 3</li>
+`;
+
+chart.data.datasets[0].data = [5,7,9];
+chart.update();
+
+base = false;
+
+}else{
+metrics.innerHTML = `
+<li>Churn: 2.5%</li>
+<li>Revenue Growth: 15%</li>
+<li>Ad Revenue: 20%</li>
+<li>Break-even: Year 2</li>
+`;
+
+chart.data.datasets[0].data = [5,10,15];
+chart.update();
+
+base = true;
+}
+}
+</script>
 
 </body>
 </html>
