@@ -1,161 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Netflix V2 Strategic Microsite</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<title>Netflix V2 Microsite</title>
 <style>
 body {font-family: Arial; margin:0; background:#111; color:#fff;}
-header {background:#e50914; padding:30px; text-align:center;}
-section {padding:40px; max-width:1000px; margin:auto;}
+nav {background:#000; padding:15px; text-align:center;}
+nav a {color:#fff; margin:0 15px; text-decoration:none;}
+section {padding:50px; max-width:1000px; margin:auto;}
+h1,h2 {color:#e50914;}
 .card {background:#1c1c1c; padding:20px; margin:20px 0; border-radius:10px;}
-h2 {color:#e50914;}
-.grid {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.btn {background:#e50914; padding:12px 20px; display:inline-block; margin-top:10px;}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Netflix V2 Strategy Microsite</h1>
-<p>Strategic Pivot | Financial Model | AI Integration</p>
-</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#details">Offering</a>
+<a href="#pricing">Pricing</a>
+<a href="#trust">Results</a>
+</nav>
 
-<section>
+<!-- HOMEPAGE -->
+<section id="home">
+<h1>Netflix V2: Smarter Streaming for Value-Conscious Users</h1>
 
-<h2>1. Strategic Intent</h2>
 <div class="card">
-<p>Netflix V2 focuses on improving retention, reducing churn, and optimizing profitability through pricing flexibility and disciplined content investment.</p>
+<p><strong>Who it's for:</strong> Price-sensitive global users seeking flexibility</p>
+<p><strong>What it delivers:</strong> Affordable, high-quality content with flexible access</p>
 </div>
 
-<h2>2. Core Assumptions (Base Case)</h2>
 <div class="card">
+<h2>Solution</h2>
+<p>Netflix V2 introduces an ad-supported tier and AI-driven personalization to reduce churn and improve retention.</p>
+</div>
+
+<div class="card">
+<h2>Key Outcomes</h2>
 <ul>
-<li>Average Subscription Price (ARPU): $10/month</li>
-<li>Subscriber Growth: 5% → 10% → 15%</li>
-<li>Churn Rate: Reduced from 4% to 2.5%</li>
-<li>Ad Tier Adoption: 20% of users</li>
-<li>Content Spend Efficiency: +15% ROI</li>
-<li>AI Cost: $200M annually</li>
+<li>Reduce churn by 30%</li>
+<li>Improve content ROI by 15%</li>
+<li>Expand access through lower pricing tiers</li>
 </ul>
 </div>
 
-<h2>3. Revenue Model</h2>
-<div class="card">
-<p><strong>Revenue = Price × Subscribers × Retention</strong></p>
-<ul>
-<li>Revenue Streams:</li>
-<li>- Subscription</li>
-<li>- Ad-supported tier</li>
-<li>- Licensing</li>
-</ul>
-</div>
-
-<h2>4. Cost Structure</h2>
-<div class="grid">
-
-<div class="card">
-<h3>Fixed Costs</h3>
-<ul>
-<li>Content production</li>
-<li>Platform infrastructure</li>
-<li>AI systems</li>
-<li>Staff salaries</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Variable Costs</h3>
-<ul>
-<li>Marketing spend</li>
-<li>Customer acquisition</li>
-<li>Streaming bandwidth</li>
-<li>Customer support</li>
-</ul>
-</div>
-
-</div>
-
-<h2>5. Profitability Logic</h2>
-<div class="card">
-<p><strong>Step 1:</strong> Revenue – Variable Costs = Gross Profit</p>
-<p><strong>Step 2:</strong> Gross Profit – Fixed Costs = Operating Profit</p>
-</div>
-
-<h2>6. Financial Projection</h2>
-<div class="card">
-<canvas id="chart"></canvas>
-</div>
-
-<h2>7. Break-Even Analysis</h2>
-<div class="card">
-<ul>
-<li>Break-even achieved when revenue covers fixed costs</li>
-<li>Estimated timeline: Year 2</li>
-<li>Driven by ad-tier monetization and churn reduction</li>
-</ul>
-</div>
-
-<h2>8. Downside Scenario</h2>
-<div class="card">
-<ul>
-<li>Lower growth (5% → 7%)</li>
-<li>Higher churn (3.5%)</li>
-<li>Increased content costs</li>
-<li>Delayed profitability (Year 3)</li>
-</ul>
-</div>
-
-<h2>9. Internal Consistency Check</h2>
-<div class="card">
-<ul>
-<li>Does growth align with marketing spend? ✔</li>
-<li>Does AI reduce churn? ✔</li>
-<li>Are costs scaling with users? ✔</li>
-<li>Is infrastructure scalable? ✔</li>
-</ul>
-</div>
-
-<h2>10. AI Integration</h2>
-<div class="card">
-<ul>
-<li>Recommendation engine → increases retention</li>
-<li>Churn prediction → proactive engagement</li>
-<li>Content ROI modeling → better investment decisions</li>
-</ul>
-</div>
-
-<h2>11. Conclusion</h2>
-<div class="card">
-<p>Netflix V2 demonstrates a financially disciplined, AI-enabled strategy capable of sustaining growth even under downside conditions.</p>
-</div>
-
+<a href="#pricing" class="btn">View Pricing</a>
 </section>
 
-<script>
-const ctx = document.getElementById('chart');
+<!-- OFFERING PAGE -->
+<section id="details">
+<h2>What You Get</h2>
 
-new Chart(ctx, {
-type: 'line',
-data: {
-labels: ['Year 1', 'Year 2', 'Year 3'],
-datasets: [
-{
-label: 'Revenue Growth (%)',
-data: [5, 10, 15],
-borderColor: '#e50914'
-},
-{
-label: 'Cost Growth (%)',
-data: [4, 6, 8],
-borderColor: '#00ffcc'
-}
-]
-}
-});
-</script>
+<div class="card">
+<ul>
+<li><strong>Format:</strong> Subscription + Ad-supported model</li>
+<li><strong>Access:</strong> On-demand streaming globally</li>
+<li><strong>Core Features:</strong> AI recommendations, flexible pricing</li>
+<li><strong>Support:</strong> Multi-device, 24/7 platform</li>
+<li><strong>Deliverables:</strong> Personalized content experience</li>
+<li><strong>Outcome:</strong> Higher value per dollar spent</li>
+</ul>
+</div>
+
+<a href="#pricing" class="btn">See Pricing Options</a>
+</section>
+
+<!-- PRICING PAGE -->
+<section id="pricing">
+<h2>Pricing Structure</h2>
+
+<div class="card">
+<h3>Ad-Supported Plan</h3>
+<p>$6/month</p>
+<p>Includes ads, full content access</p>
+</div>
+
+<div class="card">
+<h3>Standard Plan</h3>
+<p>$10/month</p>
+<p>No ads, HD streaming</p>
+</div>
+
+<div class="card">
+<h3>Premium Plan</h3>
+<p>$15/month</p>
+<p>4K streaming + multi-device</p>
+</div>
+
+<div class="card">
+<h3>Risk Reduction</h3>
+<ul>
+<li>Cancel anytime</li>
+<li>Flexible downgrade options</li>
+</ul>
+</div>
+
+<a href="#trust" class="btn">See Results</a>
+</section>
+
+<!-- TRUST / RESULTS PAGE -->
+<section id="trust">
+<h2>Proof & Results</h2>
+
+<div class="card">
+<ul>
+<li>Projected churn reduction: 30%</li>
+<li>Ad-tier adoption: 20% of users</li>
+<li>Revenue growth: 15% by Year 3</li>
+<li>Improved retention through AI personalization</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Strategic Strength</h3>
+<p>Netflix V2 aligns pricing, content, and user expectations—fixing the core mismatch identified in V1.</p>
+</div>
+
+<a href="#home" class="btn">Back to Top</a>
+</section>
 
 </body>
 </html>
