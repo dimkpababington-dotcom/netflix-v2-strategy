@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Netflix V2 Strategic Microsite</title>
+<title>Netflix V2 Strategy</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
@@ -13,10 +13,20 @@ section {padding:50px; max-width:1000px; margin:auto;}
 h1,h2 {color:#e50914;}
 
 .card {background:#1c1c1c; padding:20px; margin:20px 0; border-radius:10px;}
-.grid {display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.grid {display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
 .btn {background:#e50914; padding:10px 20px; display:inline-block; margin-top:10px;}
 
-.toggle {background:#333; padding:10px; cursor:pointer; margin-top:10px;}
+.toggle {background:#333; padding:10px; cursor:pointer; margin-top:10px; text-align:center;}
+
+img {
+width:100%;
+border-radius:10px;
+}
+
+img:hover {
+transform: scale(1.05);
+transition: 0.3s;
+}
 </style>
 </head>
 
@@ -26,27 +36,26 @@ h1,h2 {color:#e50914;}
 <a href="#home">Home</a>
 <a href="#offering">Offering</a>
 <a href="#pricing">Pricing</a>
-<a href="#trust">Results</a>
+<a href="#results">Results</a>
 </nav>
 
-<!-- HOMEPAGE -->
+<!-- HOME -->
 <section id="home">
 <h1>Netflix V2: Flexible Streaming for Value-Conscious Users</h1>
 
 <div class="card">
 <p>
-Designed for price-sensitive users frustrated with rigid subscriptions, Netflix V2 delivers a flexible, AI-powered streaming experience that reduces churn and increases value.
+Netflix V2 reduces churn and pricing rigidity by introducing flexible plans and AI-driven personalization to improve user retention and value.
 </p>
 </div>
 
-<!-- ICP PERSONA -->
 <div class="card">
-<h2>Ideal Customer Profile (ICP)</h2>
-
+<h2>Ideal Customer Profile</h2>
 <p><strong>Name:</strong> Daniel, 28</p>
-<p><strong>Behavior:</strong> Subscribes occasionally, cancels frequently due to cost</p>
-<p><strong>Pain Point:</strong> Feels locked into paying for content he doesn’t always use</p>
-<p><strong>Goal:</strong> Affordable, flexible streaming without commitment pressure</p>
+<p><strong>Behavior:</strong> Cancels subscriptions due to cost</p>
+<p><strong>Pain Point:</strong> Feels locked into rigid pricing</p>
+<p><strong>Goal:</strong> Flexible, affordable streaming</p>
+<p><strong>Not for:</strong> Premium-only users unwilling to accept ads</p>
 </div>
 
 <a href="#pricing" class="btn">View Pricing</a>
@@ -54,90 +63,104 @@ Designed for price-sensitive users frustrated with rigid subscriptions, Netflix 
 
 <!-- OFFERING -->
 <section id="offering">
-<h2>Netflix V2 Offering</h2>
+<h2>Product Offering</h2>
 
 <div class="card">
 <p>
-Netflix V2 transforms streaming into a flexible, value-driven model through pricing tiers and AI-driven personalization.
+Netflix V2 delivers flexible pricing and AI-powered recommendations to improve retention and user satisfaction.
 </p>
 </div>
 
-<!-- V1 vs V2 -->
 <div class="grid">
 
 <div class="card">
 <h3>V1 Problems</h3>
 <ul>
-<li>High churn (4%)</li>
-<li>Rigid subscription model</li>
-<li>Low pricing flexibility</li>
-<li>Inefficient content spend</li>
+<li>High churn (~4%)</li>
+<li>Rigid pricing</li>
+<li>Low content ROI</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>V2 Improvements</h3>
+<h3>V2 Solution</h3>
 <ul>
-<li>Reduced churn (2.5%)</li>
-<li>Flexible pricing tiers</li>
+<li>Churn reduced (~2.5%)</li>
+<li>Flexible plans</li>
 <li>AI personalization</li>
-<li>Optimized content ROI</li>
 </ul>
 </div>
 
 </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING WITH POSTERS -->
 <section id="pricing">
 <h2>Pricing Plans</h2>
 
+<div class="grid">
+
 <div class="card">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
 <h3>Ad-Supported</h3>
 <p>$6/month</p>
+<p>Affordable streaming with ads</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4">
 <h3>Standard</h3>
 <p>$10/month</p>
+<p>No ads, HD streaming</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc">
 <h3>Premium</h3>
 <p>$15/month</p>
+<p>4K + multi-device</p>
+</div>
+
 </div>
 
 <div class="card">
 <p>✔ Cancel anytime | ✔ Flexible plans</p>
 </div>
+
 </section>
 
-<!-- RESULTS / TRUST -->
-<section id="trust">
+<!-- RESULTS -->
+<section id="results">
 <h2>Performance & Financial Model</h2>
 
 <div class="card">
 <ul id="metrics">
 <li>Churn: 2.5%</li>
-<li>Revenue Growth: 15%</li>
+<li>Revenue Growth: 5% → 15%</li>
 <li>Ad Revenue: 20%</li>
 <li>Break-even: Year 2</li>
 </ul>
 </div>
 
-<!-- TOGGLE -->
 <div class="toggle" onclick="toggleScenario()">
-Click to View Downside Scenario
+Toggle Downside Scenario
 </div>
 
-<!-- CHART -->
 <div class="card">
 <canvas id="chart"></canvas>
 </div>
 
-<!-- CTA -->
 <div class="card">
-<h2>Start Your Experience</h2>
+<h2>AI Integration</h2>
+<ul>
+<li>Recommendation engine improves engagement</li>
+<li>Churn prediction reduces cancellations</li>
+<li>Content ROI optimization improves efficiency</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Start Your Netflix V2 Experience</h2>
 <p>Flexible pricing. Smarter streaming. Better value.</p>
 <a class="btn">Get Started</a>
 </div>
@@ -156,13 +179,11 @@ labels: ['Year 1', 'Year 2', 'Year 3'],
 datasets: [
 {
 label: 'Revenue Growth',
-data: [5,10,15],
-borderColor:'#e50914'
+data: [5,10,15]
 },
 {
 label: 'Cost Growth',
-data: [4,6,8],
-borderColor:'#00ffcc'
+data: [4,6,8]
 }
 ]
 }
@@ -188,7 +209,7 @@ base = false;
 }else{
 metrics.innerHTML = `
 <li>Churn: 2.5%</li>
-<li>Revenue Growth: 15%</li>
+<li>Revenue Growth: 5% → 15%</li>
 <li>Ad Revenue: 20%</li>
 <li>Break-even: Year 2</li>
 `;
